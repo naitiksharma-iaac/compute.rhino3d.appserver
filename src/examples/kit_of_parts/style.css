@@ -3,6 +3,7 @@
 html{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
+    font-family: roboto;
 }
 
 @keyframes beginAnimation{
@@ -18,6 +19,17 @@ html{
 
 h1{
     background: linear-gradient(120deg, red, blue);
+    font-family: orbitron;
+    color: white;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    animation-name: beginAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+h2{
     font-family: orbitron;
     color: white;
     padding-top: 1rem;
