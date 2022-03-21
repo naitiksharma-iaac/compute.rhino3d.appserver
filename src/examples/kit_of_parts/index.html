@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <link rel="icon" href="data:,">
         <title>kit_of_parts.gh</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="script.js"></script>
         <style>
             body {
                 margin: 0;
@@ -16,11 +18,11 @@
             #overlay { z-index: 1; width: 100%; }
             #overlay div { padding: 5px; }
             #loader {
-                border: 5px solid #f3f3f3; /* Light grey */
-                border-top: 5px solid #3d3d3d; /* Grey */
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
+                border: 5px solid #0efa49; /* Light grey */
+                border-top: 5px solid #e41818; /* Grey */
+                border-radius: 10%;
+                width: 20px;
+                height: 20px;
                 animation: spin 1s linear infinite;
                 position: absolute;
                 top: 50%;
@@ -34,35 +36,37 @@
         </style>
     </head>
     <body>
+      <h1 id="mainHeading">Kit-of-Parts</h1>
+      <h2>Visualise Parts </h2>
         <div id="loader"></div> 
         <div id="container">
             <div id="overlay">
-                <div>
-                  <label for="numberofparts">numberofparts</label>
-                  <input type="number" id="numberofparts" value="296">
+                <div class="slidecontainer">
+                  <label for="numberofparts">Number of Parts</label>
+                  <input type="range" id="numberofparts" min="10" max="300" value="30" step="1" class="slider">
+                </div>
+                <div class="slidecontainer">
+                  <label for="sitelength">Site Length</label>
+                  <input type="range" id="sitelength" min="5" max="80" value="30" step="1" class="slider">
+                </div>
+                <div class="slidecontainer">
+                  <label for="sitebreadth">Site Breadth</label>
+                  <input type="range" id="sitebreadth" min="5" max="80" value="30" step="1" class="slider">
+                </div>
+                <div class="slidecontainer">
+                  <label for="siteheight">Site Height</label>
+                  <input type="range" id="siteheight" min="5" max="80" value="30" step="1" class="slider">
+                </div>
+                <div class="slidecontainer">
+                  <label for="xyzaxis">X/Y/Z Axis</label>
+                  <input type="range" id="xyzaxis" min="0" max="2" value="0" step="1" class="slider">
+                </div>
+                <div class="slidecontainer">
+                  <label for="shiftsides">Shift sides</label>
+                  <input type="range" id="shiftsides" min="0" max="2" value="0" step="1" class="slider">
                 </div>
                 <div>
-                  <label for="sitelength">sitelength</label>
-                  <input type="number" id="sitelength" value="83">
-                </div>
-                <div>
-                  <label for="sitebreadth">sitebreadth</label>
-                  <input type="number" id="sitebreadth" value="80">
-                </div>
-                <div>
-                  <label for="siteheight">siteheight</label>
-                  <input type="number" id="siteheight" value="43">
-                </div>
-                <div>
-                  <label for="xyzaxis">xyzaxis</label>
-                  <input type="number" id="xyzaxis" value="0">
-                </div>
-                <div>
-                  <label for="shiftsides">shiftsides</label>
-                  <input type="number" id="shiftsides" value="2">
-                </div>
                 <div><button id="downloadButton" disabled>Download</button></div>
-                <div><a href="kit_of_parts.gh" download="kit_of_parts.gh.html">Save source code</a></div>
             </div>
         </div>
 
