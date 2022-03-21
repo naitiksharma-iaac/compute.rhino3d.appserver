@@ -3,15 +3,6 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.126.0/exampl
 import { Rhino3dmLoader } from 'https://cdn.jsdelivr.net/npm/three@0.126.0/examples/jsm/loaders/3DMLoader.js'
 import rhino3dm from 'https://cdn.jsdelivr.net/npm/rhino3dm@0.15.0-beta/rhino3dm.module.js'
 
-var slider = document.getElementById("numberofparts");
-var output = document.getElementById("numberofparts");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
 // set up loader for converting the results to threejs
 const loader = new Rhino3dmLoader()
 loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@0.15.0-beta/' )
@@ -83,17 +74,6 @@ function init() {
     scene.background = new THREE.Color(1, 1, 1)
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000)
     camera.position.set(1, -1, 1) // like perspective view
-
-    //Grid Helper
-    const gridHelper = new THREE.GridHelper( 400, 40, 0x0000ff, 0x808080 );
-	gridHelper.position.y = - 150;
-	gridHelper.position.x = - 150;
-	scene.add( gridHelper );
-    
-    const polarGridHelper = new THREE.PolarGridHelper( 200, 16, 8, 64, 0x0000ff, 0x808080 );
-	polarGridHelper.position.y = - 150;
-	polarGridHelper.position.x = 200;
-	scene.add( polarGridHelper );
 
     // very light grey for background, like rhino
     scene.background = new THREE.Color('whitesmoke')
