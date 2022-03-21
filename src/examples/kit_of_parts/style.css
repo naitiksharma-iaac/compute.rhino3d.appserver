@@ -31,14 +31,20 @@ h1{
 
 h2{
     font-family: orbitron;
-    color: white;
-    padding-top: 1rem;
+    color: black;
+    padding-top: 0.2rem;
     padding-left: 1rem;
-    padding-bottom: 1rem;
-    animation-name: beginAnimation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    padding-bottom: rem;
 }
+
+h3{
+    font-family: orbitron;
+    color: black;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+}
+
 
 body{
     background: rgb(255, 255, 255);
@@ -49,13 +55,14 @@ body{
 
 canvas{
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border: 2.25px solid black;
     border-style: dashed;
 }
 
 .slidecontainer{
     width: 30%;
-    padding-left: 1rem;
 }
 
 .slider{
@@ -89,5 +96,19 @@ canvas{
     width: 25px;
     height: 25px;
     background: #04AA6D;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    padding: 15px 32px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
 }
