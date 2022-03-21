@@ -6,3 +6,4 @@ Kit of Parts is an online configurator that takes some predefined building parts
 •	Download button to download the model in .3dm format.
 •	Project uses Rhino Compute and Heroku app for creating this project.
 •	Project developed over Rhino and Grasshopper and wasp a plugin for Rhino.
+link to the Heroku App: https://kitofparts-naitiksharma.herokuapp.com/examples/kit_of_parts/
