@@ -84,6 +84,17 @@ function init() {
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000)
     camera.position.set(1, -1, 1) // like perspective view
 
+    //Grid Helper
+    const gridHelper = new THREE.GridHelper( 400, 40, 0x0000ff, 0x808080 );
+	gridHelper.position.y = - 150;
+	gridHelper.position.x = - 150;
+	scene.add( gridHelper );
+    
+    const polarGridHelper = new THREE.PolarGridHelper( 200, 16, 8, 64, 0x0000ff, 0x808080 );
+	polarGridHelper.position.y = - 150;
+	polarGridHelper.position.x = 200;
+	scene.add( polarGridHelper );
+
     // very light grey for background, like rhino
     scene.background = new THREE.Color('whitesmoke')
 
